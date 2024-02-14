@@ -25,13 +25,13 @@ let operate = function(num1, num2, operator) {
 }
 
 //populating display
-let displayValue = 0;
+let displayValue = '';
 const displayDiv = document.getElementById('displayDiv');
 displayDiv.textContent = displayValue;
 
 let numBtns = document.querySelectorAll('.numBtn');
 numBtns.forEach(btn => btn.addEventListener('click', function(event) {
     event.preventDefault();
-    displayValue = btn.value;
+    displayValue += btn.value;
     displayDiv.textContent = displayValue;
 }));
