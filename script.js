@@ -60,3 +60,9 @@ equalBtn.addEventListener('click', function() {
     let result = operate(num1, num2, operator);
     displayDiv.textContent = result;
 })
+
+let clearBtn = document.getElementById('clearBtn');
+clearBtn.addEventListener('click', function() {
+    displayValue = '';
+    displayDiv.textContent = displayValue;
+})
