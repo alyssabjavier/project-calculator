@@ -19,6 +19,9 @@ let operate = function(num1, num2, operator) {
             result = multiply(num1, num2);
             break;
         case '/':
+            if (num2 === 0) {
+                return "u can't fuckin do that dumbass";
+            };
             result = divide(num1, num2);
             break;
     }
@@ -60,15 +63,15 @@ mathBtns.forEach(btn => btn.addEventListener('click', function(event) {
 let equalBtn = document.getElementById('equalBtn');
 equalBtn.addEventListener('click', function() {
     if (num1str && operator) {
-    let num1 = parseFloat(num1str);
-    let num2 = parseFloat(displayValue);
-        console.log({num2});
-    let result = operate(num1, num2, operator);
-    displayValue = result;
-    displayDiv.textContent = displayValue;
-    num1str = displayValue;
-    operator = '';
-    console.log({displayValue});
+        let num1 = parseFloat(num1str);
+        let num2 = parseFloat(displayValue);
+            console.log({num2});
+        let result = operate(num1, num2, operator);
+        displayValue = result.toString();
+        displayDiv.textContent = displayValue;
+        num1str = displayValue;
+        operator = '';
+        console.log({displayValue});
     }
 })
 
@@ -86,7 +89,7 @@ clearBtn.addEventListener('click', function() {
 //decimal button
 let decimalBtn = document.getElementById('decimalBtn');
 decimalBtn.addEventListener('click', function(event) {
-    event.preventDefault();
+   // event.preventDefault();
     if (!displayValue.includes('.')) {
         displayValue += decimalBtn.value;
         displayDiv.textContent = displayValue;
