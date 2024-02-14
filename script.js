@@ -58,7 +58,8 @@ equalBtn.addEventListener('click', function() {
     let num2 = parseFloat(displayValue);
         console.log({num2});
     let result = operate(num1, num2, operator);
-    displayDiv.textContent = result;
+    displayValue = result;
+    displayDiv.textContent = displayValue;
 })
 
 let clearBtn = document.getElementById('clearBtn');
