@@ -1,4 +1,5 @@
 body {
+    font-family: Tahoma, sans-serif;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -6,6 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #e0dded;
+}
+
+button {
+    border-radius: 5px;
+    border-color: white;
+    font-size: 15px;
 }
 
 #calculatorDiv {
@@ -19,6 +26,8 @@ body {
 #displayDiv {
     display: flex;
     justify-content: right;
+    background-color: #dedede;
+    font-size: px;
 }
 
 .numBtn {
