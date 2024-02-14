@@ -1,3 +1,51 @@
 body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #e0dded;
+}
+
+#calculatorDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#displayDiv {
+    display: flex;
+    justify-content: right;
+}
+
+.numBtn {
+    background-color: #c2cfc7;
+}
+
+#decimalBtn {
+    background-color: #c2cfc7; 
+}
+
+.mathBtn {
+    background-color: #c8d5e6;
+}
+
+#clearBtn, #equalBtn {
+    background-color: #cfc8e6;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#zero {
+    flex: 2;
+}
+
+#clearBtn, #equalBtn {
+    flex: 2;
 }
