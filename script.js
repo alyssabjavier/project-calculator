@@ -23,3 +23,15 @@ let operate = function(num1, num2, operator) {
     }
     return result;
 }
+
+//populating display
+let displayValue = 0;
+const displayDiv = document.getElementById('displayDiv');
+displayDiv.textContent = displayValue;
+
+let numBtns = document.querySelectorAll('.numBtn');
+numBtns.forEach(btn => btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    displayValue = btn.value;
+    displayDiv.textContent = displayValue;
+}));
