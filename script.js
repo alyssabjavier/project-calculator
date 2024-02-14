@@ -66,5 +66,8 @@ equalBtn.addEventListener('click', function() {
 let clearBtn = document.getElementById('clearBtn');
 clearBtn.addEventListener('click', function() {
     displayValue = '';
+    num1str = '';
+    num1 = '';
+    num2 = '';
     displayDiv.textContent = displayValue;
 })
