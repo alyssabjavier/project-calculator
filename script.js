@@ -25,12 +25,13 @@ let operate = function(num1, num2, operator) {
     return result;
 }
 
-//populating display
+//display element
 let displayValue = '';
 let num1str = '';
 const displayDiv = document.getElementById('displayDiv');
-displayDiv.textContent = displayValue;
+displayDiv.textContent = 0;
 
+//number buttons to fill display and become value for numbers in operate function
 let numBtns = document.querySelectorAll('.numBtn');
 numBtns.forEach(btn => btn.addEventListener('click', function(event) {
     event.preventDefault();
@@ -38,36 +39,63 @@ numBtns.forEach(btn => btn.addEventListener('click', function(event) {
     displayDiv.textContent = displayValue;
 }));
 
+//operator buttons
 let mathBtns = document.querySelectorAll('.mathBtn');
 mathBtns.forEach(btn => btn.addEventListener('click', function(event) {
     event.preventDefault();
+    //if num1str and operator exists, aka already entered a mathematical operation and want to string another one to the answer
+    if (num1str && operator) {
+        let num1 = parseFloat(num1str);
+        let num2 = parseFloat(displayValue);
+        let result = operate(num1, num2, operator);
+        displayValue = result;
+        displayDiv.textContent = displayValue;
+    };
     operator = btn.value;
     num1str = displayValue;
-        console.log({operator});
-        console.log(btn.value);
-        console.log({displayValue})
-        console.log({num1str});
-     displayValue = '';
-         console.log({displayValue});
-    // displayDiv.textContent = displayValue;
+    displayValue = '';
 }));
 
+//equal button
 let equalBtn = document.getElementById('equalBtn');
 equalBtn.addEventListener('click', function() {
+    if (num1str && operator) {
     let num1 = parseFloat(num1str);
     let num2 = parseFloat(displayValue);
         console.log({num2});
     let result = operate(num1, num2, operator);
     displayValue = result;
     displayDiv.textContent = displayValue;
+    num1str = displayValue;
+    operator = '';
     console.log({displayValue});
+    }
 })
 
+//clear button
 let clearBtn = document.getElementById('clearBtn');
 clearBtn.addEventListener('click', function() {
     displayValue = '';
     num1str = '';
     num1 = '';
     num2 = '';
-    displayDiv.textContent = displayValue;
+    operator = '';
+    displayDiv.textContent = 0;
 })
+
+//decimal button
+let decimalBtn = document.getElementById('decimalBtn');
+decimalBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (!displayValue.includes('.')) {
+        displayValue += decimalBtn.value;
+        displayDiv.textContent = displayValue;
+    }})
+
+// console.log({displayValue}, {num1str}, {num1}, {num2}, {operator}, {result});
+// console.log(btn.value);
+// console.log({displayValue})
+// console.log({num1str});
+// console.log({displayValue});
+
+    // displayDiv.textContent = displayValue;
