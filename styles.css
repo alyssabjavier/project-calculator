@@ -97,6 +97,7 @@ button {
     font-family: digital-7;
     margin: 8px 0px;
     border-radius: 3px;
+    max-width: 215px;
 }
 
 /* green number buttons */
