@@ -25,7 +25,7 @@ let operate = function(num1, num2, operator) {
             result = divide(num1, num2);
             break;
     }
-    return result;
+    return parseFloat(result.toFixed(5));
 }
 
 //display element
