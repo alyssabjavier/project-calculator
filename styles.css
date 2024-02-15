@@ -109,6 +109,7 @@ button {
 .numBtn:hover, #decimalBtn:hover {
     background-color:#6f877e;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 /* cream math/equal buttons */
@@ -120,6 +121,7 @@ button {
 .mathBtn:hover, #equalBtn:hover {
     background-color:#dbd4cc;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 #clearBtn {
@@ -130,6 +132,7 @@ button {
 #clearBtn:hover {
     background-color: #6e4349;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .row {
