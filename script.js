@@ -20,7 +20,7 @@ let operate = function(num1, num2, operator) {
             break;
         case '/':
             if (num2 === 0) {
-                return "u can't fuckin do that dumbass";
+                return "ERROR";
             };
             result = divide(num1, num2);
             break;

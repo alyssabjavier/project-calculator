@@ -1,49 +1,87 @@
+/* fonts */
+@font-face {
+    font-family:digital-7;
+    src: url('assets/digital-7.ttf');
+}
+
+.quicksand-calc {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
 body {
-    font-family: Tahoma, sans-serif;
-    width: 100vw;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e0dded;
+    background-color: #d2d9d6;
 }
 
 button {
-    border-radius: 5px;
-    border-color: white;
-    font-size: 15px;
+    border-radius: 7px;
+    border-color: #f5efeb;
+    border-width: thin;
+    /* border: none; */
+    font-size: 24px;
+    width: 46px;
+    height: 36px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 3px;
 }
 
 #calculatorDiv {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #e9e0d6;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px #888888;
 }
 
+/* display */
 #displayDiv {
     display: flex;
     justify-content: right;
-    background-color: #dedede;
-    font-size: px;
+    background-color: #a5adad;
+    font-size: 54px;
+    font-family: digital-7;
+    margin: 8px 0px;
 }
 
-.numBtn {
-    background-color: #c2cfc7;
+/* green number buttons */
+.numBtn, #decimalBtn {
+    background-color: #7f998f;
+    color: white;
 }
 
-#decimalBtn {
-    background-color: #c2cfc7; 
+.numBtn:hover, #decimalBtn:hover {
+    background-color:#6f877e;
+    transition: 0.3s;
 }
 
-.mathBtn {
-    background-color: #c8d5e6;
+/* cream math/equal buttons */
+.mathBtn, #equalBtn {
+    background-color: #ede4db;
 }
 
-#clearBtn, #equalBtn {
-    background-color: #cfc8e6;
+.mathBtn:hover, #equalBtn:hover {
+    background-color:#dbd4cc;
+    transition: 0.3s;
+}
+
+#clearBtn {
+    background-color: #7d4c53;
+    color: white;
+}
+
+#clearBtn:hover {
+    background-color: #6e4349;
+    transition: 0.3s;
 }
 
 .row {
