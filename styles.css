@@ -11,11 +11,11 @@
   font-style: normal;
 }
 
-.righteous-regular {
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
+.kosugi-maru-regular {
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .sora-calc {
     font-family: "Sora", sans-serif;
@@ -51,7 +51,7 @@ body {
 }
 #logo {
         /* width: 75px; */
-    font-family: 'Righteous', serif;
+    font-family: "Kosugi Maru", sans-serif;
     font-size: 16px;
 }
 #block {
