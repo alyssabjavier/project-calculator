@@ -34,12 +34,6 @@ body {
     background-color: #d6d9d8;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #calculatorDiv {
     display: flex;
     flex-direction: column;
@@ -119,6 +113,7 @@ button {
 /* cream math/equal buttons */
 .mathBtn, #equalBtn {
     background-color: #ede4db;
+    color: #181818;
 }
 
 .mathBtn:hover, #equalBtn:hover {
