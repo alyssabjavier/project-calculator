@@ -73,7 +73,6 @@ equalBtn.addEventListener('click', function() {
         operator = '';
         console.log({displayValue});
     }
-    if (displayDiv.textContent = 'ERROR') {alert("u can't fuckin do that dumbass");}
 })
 
 //clear button
