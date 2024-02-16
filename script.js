@@ -111,7 +111,11 @@ backBtn.addEventListener('click', function() {
 let decimalBtn = document.getElementById('decimalBtn');
 decimalBtn.addEventListener('click', function(event) {
    // event.preventDefault();
-    if (!displayValue.includes('.')) {
+   if (didEquation === true) {
+        displayValue = '';
+        didEquation = false;
+    }       
+   if (!displayValue.includes('.')) {
         displayValue += decimalBtn.value;
         displayDiv.textContent = displayValue;
     }})
