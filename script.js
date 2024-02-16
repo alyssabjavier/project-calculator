@@ -59,6 +59,9 @@ mathBtns.forEach(btn => btn.addEventListener('click', function(event) {
         let result = operate(num1, num2, operator);
         displayValue = result;
         displayDiv.textContent = displayValue;
+        if (displayDiv.textContent === 'ERROR') {
+            alert("you can't do that silly! :c");
+        }
     };
     operator = btn.value;
     num1str = displayValue;
@@ -79,6 +82,9 @@ equalBtn.addEventListener('click', function() {
         operator = '';
         console.log({displayValue});
         didEquation = true;
+        if (displayDiv.textContent === 'ERROR') {
+            alert("you can't do that silly! :c");
+        }
     }
 })
 
