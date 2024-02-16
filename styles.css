@@ -112,6 +112,11 @@ button {
     cursor: pointer;
 }
 
+.numBtn:active, #decimalBtn:active {
+    background-color:#6f877e;
+    transform: translateY(1px);
+  }
+
 /* cream math/equal buttons */
 .mathBtn, #equalBtn {
     background-color: #ede4db;
@@ -124,6 +129,11 @@ button {
     cursor: pointer;
 }
 
+.mathBtn:active, #equalBtn:active {
+    background-color:#dbd4cc;
+    transform: translateY(1px);
+}
+
 #clearBtn, #backBtn {
     background-color: #7d4c53;
     color: white;
@@ -133,6 +143,11 @@ button {
     background-color: #6e4349;
     transition: 0.3s;
     cursor: pointer;
+}
+
+#clearBtn:active, #backBtn:active {
+    background-color: #6e4349;
+    transform: translateY(1px);
 }
 
 .row {

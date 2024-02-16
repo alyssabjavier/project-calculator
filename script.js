@@ -115,11 +115,3 @@ decimalBtn.addEventListener('click', function(event) {
         displayValue += decimalBtn.value;
         displayDiv.textContent = displayValue;
     }})
-
-// console.log({displayValue}, {num1str}, {num1}, {num2}, {operator}, {result});
-// console.log(btn.value);
-// console.log({displayValue})
-// console.log({num1str});
-// console.log({displayValue});
-
-    // displayDiv.textContent = displayValue;
