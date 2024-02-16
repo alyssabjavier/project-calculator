@@ -33,11 +33,17 @@ let displayValue = '';
 let num1str = '';
 const displayDiv = document.getElementById('displayDiv');
 displayDiv.textContent = 0;
+let didEquation = false;
 
 //number buttons to fill display and become value for numbers in operate function
 let numBtns = document.querySelectorAll('.numBtn');
 numBtns.forEach(btn => btn.addEventListener('click', function(event) {
     event.preventDefault();
+    //reset if just completed an equation and started typing new numbers
+    if (didEquation === true) {
+        displayValue = '';
+        didEquation = false;
+    }
     displayValue += btn.value;
     displayDiv.textContent = displayValue;
 }));
@@ -72,6 +78,7 @@ equalBtn.addEventListener('click', function() {
         num1str = displayValue;
         operator = '';
         console.log({displayValue});
+        didEquation = true;
     }
 })
 
@@ -84,6 +91,7 @@ clearBtn.addEventListener('click', function() {
     num2 = '';
     operator = '';
     displayDiv.textContent = 0;
+    didEquation = false;
 })
 
 //decimal button
