@@ -124,12 +124,12 @@ button {
     cursor: pointer;
 }
 
-#clearBtn {
+#clearBtn, #backBtn {
     background-color: #7d4c53;
     color: white;
 }
 
-#clearBtn:hover {
+#clearBtn:hover, #backBtn:hover {
     background-color: #6e4349;
     transition: 0.3s;
     cursor: pointer;
@@ -144,6 +144,6 @@ button {
     flex: 2;
 }
 
-#clearBtn, #equalBtn {
+#equalBtn {
     flex: 2;
 }

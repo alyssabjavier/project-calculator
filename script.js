@@ -94,6 +94,13 @@ clearBtn.addEventListener('click', function() {
     didEquation = false;
 })
 
+//backspace
+let backBtn = document.getElementById('backBtn');
+backBtn.addEventListener('click', function() {
+    displayValue = '';
+    displayDiv.textContent = 0;
+})
+
 //decimal button
 let decimalBtn = document.getElementById('decimalBtn');
 decimalBtn.addEventListener('click', function(event) {
